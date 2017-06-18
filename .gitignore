@@ -2,3 +2,4 @@ state/
 *.o
 bochslog.txt
 *.elf
+*.out
