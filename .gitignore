@@ -3,3 +3,4 @@ state/
 bochslog.txt
 *.elf
 *.out
+*.iso
