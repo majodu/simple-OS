@@ -23,11 +23,12 @@ kernel_stack:
 loader:                         ; the loader label (defined as entry point in linker script)
 	mov esp, kernel_stack + KERNEL_STACK_SIZE
 	mov eax, 0xCAFEBABE
-	extern sum_of_three
-	push dword 3
-	push dword 2
-	push dword 1
-	call sum_of_three
+	extern sn_text
+;	push dword 3
+;	push dword 2
+;	push dword 1
+	call sn_text
+	mov eax, [0x000B8000]
 
 .loop:
 	jmp .loop
